@@ -9,7 +9,9 @@
 
 ***Some of my adventures elsewhere.*** 🛠 💻 📱 
 
-[![Glitch](https://i.imgur.com/4ax9TLe.png)]([https://glitch.com/@washingtonj](https://glitch.com/@washingtonj))  	[![CodeSandBox](https://i.imgur.com/ZO3KnrJ.png)]([https://codesandbox.io/u/washingtonj](https://codesandbox.io/u/washingtonj)) 	[![Expo Snacks](https://i.imgur.com/jv7VO0o.png)]([https://codesandbox.io/u/washingtonj](https://expo.io/@washingtonj/)) 
+[![Glitch](https://i.imgur.com/4ax9TLe.png)](https://glitch.com/@washingtonj)
+[![CodeSandBox](https://i.imgur.com/ZO3KnrJ.png)](https://codesandbox.io/u/washingtonj)
+[![Expo](https://i.imgur.com/jv7VO0o.png)](https://expo.io/@washingtonj)
 
     visitant == "Brazilian" 
 	    ? console.log("Até logo! 🇧🇷") 
