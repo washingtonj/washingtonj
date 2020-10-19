@@ -8,7 +8,7 @@
 
 *LinkedIn* - [https://www.linkedin.com/in/washington-junior-7136a8101/](https://www.linkedin.com/in/washington-junior-7136a8101/)
 
-***My projects in others platform.*** 🛠 💻 📱 
+***My projects in others platforms.*** 🛠 💻 📱 
 
 [![Glitch](https://i.imgur.com/4ax9TLe.png)](https://glitch.com/@washingtonj)
 [![CodeSandBox](https://i.imgur.com/ZO3KnrJ.png)](https://codesandbox.io/u/washingtonj)
