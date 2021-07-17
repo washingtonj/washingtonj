@@ -1,5 +1,6 @@
-import { CodeSandbox, LinkedIn, GitHub } from 'assets/icons'
 import Head from 'next/head'
+import Card from 'components/Card'
+import { CodeSandbox, LinkedIn, GitHub } from 'assets/icons'
 
 const data = {
   socials: [
@@ -41,10 +42,24 @@ export default function Home () {
           </div>
         </div>
         <div>
-          <nav className="nav-menu text-theme-primary text-xl font-extrabold uppercase">
+          <nav className="nav-menu text-theme-primary text-xl mb-4 font-extrabold uppercase">
             <a>Sobre</a>
             <a>Portfolio</a>
           </nav>
+          <div className="portfolio-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
       </main>
     </div>
