@@ -1,6 +1,7 @@
+import { useEffect, useRef } from 'react'
+import { CodeSandbox, LinkedIn, GitHub } from 'assets/icons'
 import Head from 'next/head'
 import Card from 'components/Card'
-import { CodeSandbox, LinkedIn, GitHub } from 'assets/icons'
 
 const data = {
   socials: [
@@ -15,7 +16,16 @@ const data = {
   ]
 }
 
-export default function Home () {
+export default function Home ({ projects }) {
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    document.addEventListener('scroll', () => {
+      const isValid = window.scrollY > 450
+      navRef.current.classList.toggle('nav-menu-stick', isValid)
+    })
+  }, [])
+
   return (
     <div>
       <Head>
@@ -41,27 +51,45 @@ export default function Home () {
             {data.subs.map((sub, idx) => <p key={idx}>{sub}</p>)}
           </div>
         </div>
-        <div>
-          <nav className="nav-menu text-theme-primary text-xl mb-4 font-extrabold uppercase">
-            <a>Sobre</a>
-            <a>Portfolio</a>
+        <div className="relative">
+          <nav ref={navRef} className="nav-menu mb-4">
+            <a className="text-xl uppercase font-extrabold text-theme-primary">Sobre</a>
+            <a className="text-xl uppercase font-extrabold text-theme-primary">Portfolio</a>
           </nav>
           <div className="portfolio-container">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            { projects.map(proj => (
+              <Card
+                key={proj.id}
+                lang={proj.language}
+                describe={proj.describe}
+                title={proj.name}
+                homepage={proj.page || proj.git}
+                hasPublicPage={proj.page}
+                />
+            ))}
           </div>
         </div>
       </main>
     </div>
   )
+}
+
+export async function getStaticProps () {
+  const res = await fetch('https://api.github.com/users/washingtonj/repos')
+  const data = await res.json()
+
+  const projects = data.map(item => ({
+    id: item.id,
+    name: item.name,
+    language: item.language,
+    describe: item.description,
+    page: item.homepage,
+    git: item.html_url
+  }))
+
+  return {
+    props: {
+      projects
+    }
+  }
 }

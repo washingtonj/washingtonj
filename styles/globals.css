@@ -21,7 +21,7 @@ a {
 
 
 .social-container > :not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 1.25rem;
 }
 
 .subs-container > :not(:last-child) {
@@ -34,6 +34,17 @@ a {
 
 .nav-menu > :not(:last-child) {
   margin-right: 1rem;
+}
+
+.nav-menu-stick {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 1rem 2.5rem;
+  background-color: #05010ef8;
+  animation: fadeInDown;
+  animation-duration: 1s;
 }
 
 .portfolio-container > :not(:last-child) {
