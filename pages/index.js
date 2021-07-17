@@ -1,6 +1,7 @@
+import { CodeSandbox } from 'assets/icons'
 import Head from 'next/head'
 
-export default function Home() {
+export default function Home () {
   return (
     <div>
       <Head>
@@ -9,8 +10,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <div></div>
+      <main className="w-screen min-h-screen bg-theme-background">
+        <div>
+          <CodeSandbox />
+
+        </div>
         <div></div>
       </main>
     </div>
