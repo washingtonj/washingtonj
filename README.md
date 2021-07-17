@@ -4,7 +4,7 @@
 > **Software Engineer based on São Paulo**
 
 
- - I'm currently working at [UpLexis](uplexis.com.br).  🏢
+ - I'm currently working at [UpLexis](https://uplexis.com.br).  🏢
  - `.js` and `.ts` developer. ⌨️
  - I use `React` and `Vue` to 👨‍💻  and  `React Native` to 📲
  - `Elixir` Student. 📚
