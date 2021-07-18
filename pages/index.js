@@ -53,7 +53,7 @@ export default function Home ({ projects }) {
         </div>
         <div className="relative">
           <nav ref={navRef} className="nav-menu mb-4">
-            <a className="text-xl uppercase font-extrabold text-theme-primary">Sobre</a>
+            <a className="text-xl uppercase font-extrabold text-theme-primary text-opacity-25">Sobre</a>
             <a className="text-xl uppercase font-extrabold text-theme-primary">Portfolio</a>
           </nav>
           <div className="portfolio-container">
@@ -90,6 +90,8 @@ export async function getStaticProps () {
   return {
     props: {
       projects
-    }
+    },
+    // days
+    revalidate: 7 * 86400
   }
 }
