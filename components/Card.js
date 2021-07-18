@@ -17,22 +17,24 @@ export default function Card ({ title, lang, describe, homepage, hasPublicPage }
 
   return (
     <div
-      className="w-full h-32 rounded p-4 cursor-pointer text-theme-tertiary bg-theme-secundary bg-opacity-25"
+      className="flex flex-col w-full h-32 p-4 rounded cursor-pointer text-theme-tertiary bg-theme-secundary bg-opacity-25 overflow-hidden"
       onClick={() => open()}
     >
       <div className="flex items-center">
-        <h2 className="text-lg font-extrabold uppercase">{title}</h2>
-        <span className="ml-2">
+        <h2 className="text-lg font-extrabold uppercase overflow-ellipsis whitespace-nowrap overflow-hidden">
+          {title}
+        </h2>
+        <span className="flex items-center ml-2">
           {langProps &&
             <p
               className="text-xs font-bold rounded py-0.5 px-1"
               style={{ backgroundColor: langProps.color }}>
               {langProps.dot}
             </p>}
+          {hasPublicPage && <Public className="w-3.5 ml-2" title="On Air" />}
         </span>
-        {hasPublicPage && <Public className="w-3.5 ml-2" title="On Air" />}
       </div>
-      <div className="text-sm mt-2">
+      <div className="text-sm mt-2 overflow-auto">
         <p>{describe || 'Este projeto esta em desenvolvimento e ainda não tem uma descrição.'}</p>
       </div>
     </div>

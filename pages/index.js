@@ -34,7 +34,7 @@ export default function Home ({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen min-h-screen p-10 bg-theme-background">
+      <main className="w-screen min-h-screen p-4 bg-theme-background">
         <div className="mb-8">
           <h1 className="text-theme-primary font-extrabold text-5xl">Hi, Im Washington Junior</h1>
           <div className="social-container flex my-8">
