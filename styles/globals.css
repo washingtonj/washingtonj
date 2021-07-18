@@ -47,6 +47,15 @@ a {
   animation-duration: 1s;
 }
 
+.portfolio-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .portfolio-container > :not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.portfolio-container::-webkit-scrollbar {
+  display: none;
 }
