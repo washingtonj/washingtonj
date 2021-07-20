@@ -24,6 +24,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
     "postcss": "^8.3.5",
+    "prop-types": "^15.7.2",
     "tailwindcss": "^2.2.4"
   }
 }

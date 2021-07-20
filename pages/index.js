@@ -1,101 +1,15 @@
-import { useEffect, useRef } from 'react'
-import { CodeSandbox, LinkedIn, GitHub } from 'assets/icons'
-import Head from 'next/head'
-import Card from 'components/Card'
-
-const data = {
-  socials: [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/washington-junior-7136a8101', icon: LinkedIn },
-    { name: 'GitHub', url: 'https://github.com/washingtonj', icon: GitHub },
-    { name: 'CodeSandbox', url: 'https://codesandbox.io/u/washingtonj', icon: CodeSandbox }
-  ],
-  subs: [
-    'Minhas ideias e soluções criam vida através da tecnologia. 📱',
-    'Se ensinar também é uma forma de aprender, então estou sempre praticando. 🎓',
-    'Meu trabalho também é meu Hobbie, então me traga desafios. ✅'
-  ]
-}
-
-export default function Home ({ projects }) {
-  const navRef = useRef(null)
-
-  useEffect(() => {
-    document.addEventListener('scroll', () => {
-      const isValid = window.scrollY > 450
-      navRef.current.classList.toggle('nav-menu-stick', isValid)
-    })
-  }, [])
-
+export default function About () {
   return (
-    <main className="w-screen min-h-screen md:h-screen bg-theme-background">
-      <Head>
-        <title>Washington Junior</title>
-        <meta name="description" content="My personal portfolio and blog" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="container m-auto h-full flex flex-col p-4 md:pt-20 md:flex-row md:overflow-hidden">
-        {/* aside */}
-        <div className="mb-8 md:mr-28">
-          <h1 className="text-theme-primary font-extrabold text-5xl md:w-56">
-            {"Hi, I'm Washington Junior"}
-          </h1>
-          <div className="social-container flex my-8">
-            {data.socials.map(social => (
-              <social.icon
-                className="w-6 cursor-pointer text-theme-primary fill-current"
-                key={social.name}
-                title={social.name}
-                onClick={() => window.open(social.url, '_blank')}
-              />
-            ))}
-          </div>
-          <div className="subs-container text-base font-medium text-theme-secundary">
-            {data.subs.map((sub, idx) => <p key={idx}>{sub}</p>)}
-          </div>
-        </div>
-        {/* bside */}
-        <div className="relative">
-          <nav ref={navRef} className="nav-menu mb-4">
-            <a className="text-xl uppercase font-extrabold text-theme-primary text-opacity-25">Sobre</a>
-            <a className="text-xl uppercase font-extrabold text-theme-primary">Portfolio</a>
-          </nav>
-          <div className="portfolio-container h-full md:overflow-scroll md:pb-20">
-            {projects.map(proj => (
-              <Card
-                key={proj.id}
-                lang={proj.language}
-                describe={proj.describe}
-                title={proj.name}
-                homepage={proj.page || proj.git}
-                hasPublicPage={proj.page}
-              />
-            ))}
-          </div>
-        </div>
+    <div className="text-theme-secundary">
+      <div className="mb-8">
+        <p className="mb-2">{'Como você já deve saber, me chamo Washington, ou Junior caso ache mais fácil. Nascido em 12 de Outubro de 1996, "Sim, no dia das crianças", sou um autodidata apaixonado por tecnologia e inovação.'}</p>
+        <p>{'Sou formado em Rede de Computadores pela Universidade Cidade de São Paulo, "Sim, eu estudei a tabela OSI", mas meu interesse por infraestrutura e pela cultura DevOps somadas a vontade de aprender e a facilidade de adaptação, me tornaram também um desenvolvedor.'}</p>
       </div>
-    </main>
+      <div>
+        <h2 className="text-xl font-bold mb-4">O que utilizo</h2>
+        <p className="mb-2">Atualmente minha linguagem principal é o Javascript, sendo ela utilizada em todas as frentes como BackEnd com NodeJS, FrontEnd com React e Vue, Mobile com React Native e Desktop com Electron. </p>
+        <p>Para estilização utilizo de recursos de pré processadores de CSS como SASS/SCSS somado ao padrão BEM ou frameworks CSS como TailwindCSS, além de bibliotecas CSS-in-JS como Styled Components e Emotion.</p>
+      </div>
+    </div>
   )
-}
-
-export async function getStaticProps () {
-  const res = await fetch('https://api.github.com/users/washingtonj/repos')
-  const data = await res.json()
-
-  const projects = data.map(item => ({
-    id: item.id,
-    name: item.name,
-    language: item.language,
-    describe: item.description,
-    page: item.homepage,
-    git: item.html_url
-  }))
-
-  return {
-    props: {
-      projects
-    },
-    // days
-    revalidate: 7 * 86400
-  }
 }
