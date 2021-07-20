@@ -17,7 +17,7 @@ export default function Card ({ title, lang, describe, homepage, hasPublicPage }
 
   return (
     <div
-      className="flex flex-col w-full h-32 p-4 rounded cursor-pointer text-theme-tertiary bg-theme-secundary bg-opacity-25 overflow-hidden"
+      className="flex flex-col w-full h-32 p-4 rounded cursor-pointer text-theme-tertiary bg-theme-secundary bg-opacity-20 overflow-hidden"
       onClick={() => open()}
     >
       <div className="flex items-center">
