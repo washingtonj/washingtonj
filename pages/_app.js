@@ -1,11 +1,12 @@
 import '../styles/globals.css'
-import Layout from 'components/Layout'
 
 function MyApp ({ Component, pageProps }) {
+  const getLayout = Component.getLayout || ((page) => page)
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <main className="w-screen min-h-screen bg-theme-background text-theme-secundary">
+      {getLayout(<Component {...pageProps} />)}
+    </main>
   )
 }
 

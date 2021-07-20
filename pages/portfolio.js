@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import PortfolioCard from '../components/PortofolioCard'
+import Layout from 'components/Layout'
 import Head from 'next/head'
 
 Portfolio.propTypes = {
@@ -34,6 +35,13 @@ export default function Portfolio ({ data }) {
     </div>
   )
 }
+
+/* eslint-disable react/display-name */
+Portfolio.getLayout = (page) => (
+  <Layout>
+    {page}
+  </Layout>
+)
 
 export async function getStaticProps () {
   const res = await fetch('https://api.github.com/users/washingtonj/repos')

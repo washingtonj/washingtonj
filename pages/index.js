@@ -1,6 +1,8 @@
+import Layout from 'components/Layout'
+
 export default function About () {
   return (
-    <div className="text-theme-secundary">
+    <div>
       <div className="mb-8">
         <p className="mb-2">{'Como você já deve saber, me chamo Washington, ou Junior caso ache mais fácil. Nascido em 12 de Outubro de 1996, "Sim, no dia das crianças", sou um autodidata apaixonado por tecnologia e inovação.'}</p>
         <p>{'Sou formado em Rede de Computadores pela Universidade Cidade de São Paulo, "Sim, eu estudei a tabela OSI", mas meu interesse por infraestrutura e pela cultura DevOps somadas a vontade de aprender e a facilidade de adaptação, me tornaram também um desenvolvedor.'}</p>
@@ -13,3 +15,10 @@ export default function About () {
     </div>
   )
 }
+
+/* eslint-disable react/display-name */
+About.getLayout = (page) => (
+  <Layout>
+    {page}
+  </Layout>
+)
