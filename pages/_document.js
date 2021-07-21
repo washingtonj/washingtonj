@@ -16,7 +16,7 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           />
         </Head>
-        <body>
+        <body className="dark">
           <Main />
           <NextScript />
         </body>

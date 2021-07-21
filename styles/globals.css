@@ -37,14 +37,21 @@ a {
 }
 
 .nav-menu-stick {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   padding: 1rem;
-  background-color: #05010ef8;
+  background-color: white;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   animation: fadeInDown;
   animation-duration: 1s;
+}
+
+.dark .nav-menu-stick {
+  background-color: #05010ef8;
 }
 
 .portfolio-container {
@@ -58,4 +65,8 @@ a {
 
 .portfolio-container::-webkit-scrollbar {
   display: none;
+}
+
+.lightbulb:hover p {
+  display: flex;
 }

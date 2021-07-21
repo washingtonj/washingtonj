@@ -1,12 +1,15 @@
 import '../styles/globals.css'
+import ThemeContext from 'context/theme'
 
 function MyApp ({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page)
 
   return (
-    <main className="w-screen min-h-screen bg-theme-background text-theme-secundary">
-      {getLayout(<Component {...pageProps} />)}
-    </main>
+    <ThemeContext>
+      <main className="w-screen min-h-screen bg-blue-50 dark:bg-theme-background text-gray-800 dark:text-theme-secundary transition-colors">
+        {getLayout(<Component {...pageProps} />)}
+      </main>
+    </ThemeContext>
   )
 }
 
