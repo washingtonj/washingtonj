@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         'theme-background': '#080217',
         'theme-primary': '#653FFF',
-        'theme-secundary': '#555C9E',
+        'theme-secundary': '#8C95E6',
         'theme-tertiary': '#E0E3FF',
         'theme-hover': '#2A0BA9'
       }

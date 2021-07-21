@@ -32,7 +32,7 @@ export default function LayoutLeftSide () {
           </div>
         ))}
       </div>
-      <div className="subs-container text-base font-medium text-theme-secundary">
+      <div className="subs-container text-base font-medium">
         {data.subs.map((sub, idx) => <p key={idx}>{sub}</p>)}
       </div>
     </div>
