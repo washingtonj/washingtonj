@@ -19,7 +19,7 @@ export default function Portfolio ({ data }) {
     <div className="portfolio-container h-full md:overflow-scroll md:pb-20">
       <Head>
         <title>{'Portfolio | Washington Junior'}</title>
-        <meta name="description" content="Meus ultimos projetos no GitHub" />
+        <meta name="description" content="Veja alguns dos meus projetos." />
       </Head>
 
       {data.map(item => (
