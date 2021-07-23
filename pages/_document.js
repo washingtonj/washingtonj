@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
             rel="stylesheet"
@@ -17,7 +17,7 @@ class MyDocument extends Document {
           />
           <meta httpEquiv="Content-Language" content="pt-br" />
         </Head>
-        <body className="dark">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -6,7 +6,7 @@ function MyApp ({ Component, pageProps }) {
 
   return (
     <ThemeContext>
-      <main className="w-screen min-h-screen bg-blue-50 dark:bg-theme-background text-gray-800 dark:text-theme-secundary transition-colors">
+      <main className="w-screen min-h-screen bg-light-background dark:bg-dark-background text-gray-700 dark:text-gray-100 transition-colors">
         {getLayout(<Component {...pageProps} />)}
       </main>
     </ThemeContext>

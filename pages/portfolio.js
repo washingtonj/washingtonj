@@ -16,7 +16,7 @@ Portfolio.propTypes = {
 
 export default function Portfolio ({ data }) {
   return (
-    <div className="portfolio-container h-full md:overflow-scroll md:pb-20">
+    <div className="portfolio-container h-full lg:overflow-scroll lg:pb-20">
       <Head>
         <title>{'Portfolio | Washington Junior'}</title>
         <meta name="description" content="Veja alguns dos meus projetos." />
@@ -44,7 +44,7 @@ Portfolio.getLayout = (page) => (
 )
 
 export async function getStaticProps () {
-  const res = await fetch('https://api.github.com/users/washingtonj/repos')
+  const res = await fetch('https://api.github.com/users/washingtonj/repos', { headers: { Authorization: 'Ot9wSZbE2QsBziFAK7Wt6AkWZ-q2dVuLolRe-8klxhAnnXOx' } })
   const data = await res.json()
 
   const projects = data.map(item => ({

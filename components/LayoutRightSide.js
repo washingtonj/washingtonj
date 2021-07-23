@@ -22,22 +22,22 @@ export default function LayoutRightSide ({ children }) {
   }, [])
 
   return (
-    <div className="relative md:w-3/6">
+    <div className="relative lg:w-3/6">
       <nav ref={navRef} className="flex items-center justify-between mb-4">
         <ul className="nav-menu flex">
           {pages.map(page => (
             <li
               key={page.name}
-              className={`text-xl uppercase font-extrabold text-theme-primary 
-                ${route.pathname !== page.path ? 'text-opacity-25' : ''}`
+              className={`text-xl uppercase font-extrabold text-light-primary dark:text-dark-primary
+                ${route.pathname !== page.path ? 'text-opacity-25 dark:text-opacity-25' : ''}`
               }>
               <Link href={page.path}>{page.name}</Link>
             </li>
           ))}
         </ul>
         {theme === 'dark'
-          ? <Lightbulb onClick={setTheme} className="text-theme-primary fill-current w-3.5 mr-2 md:hidden"></Lightbulb>
-          : <LightbulbSolid onClick={setTheme} className="text-theme-primary fill-current w-3.5 mr-2 md:hidden"></LightbulbSolid>
+          ? <Lightbulb onClick={setTheme} className="text-dark-primary fill-current w-3.5 mr-2 lg:hidden"></Lightbulb>
+          : <LightbulbSolid onClick={setTheme} className="text-light-primary fill-current w-3.5 mr-2 lg:hidden"></LightbulbSolid>
         }
       </nav>
       {children}

@@ -19,7 +19,7 @@ export default function Home ({ children }) {
         <link rel="mask-icon" href={`/${theme}/safari-pinned-tab.svg`} color="#5bbad5" />
       </Head>
 
-      <div className="container m-auto h-full md:h-screen flex flex-col px-4 py-14 md:pt-20 md:flex-row md:overflow-hidden">
+      <div className="container m-auto h-full lg:h-screen flex flex-col px-4 py-14 lg:pt-20 lg:flex-row lg:overflow-hidden">
         <LayoutLeftSide />
         <LayoutRightSide>
           {children}

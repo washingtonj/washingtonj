@@ -19,18 +19,18 @@ export default function LayoutLeftSide () {
   const [theme, setTheme] = useContext(Theme)
 
   return (
-    <div className="mb-8 md:pr-28 md:w-3/ md:flex md:flex-col">
-      <div className="md:flex-1">
-        <h1 className="text-theme-primary font-extrabold text-5xl md:w-56">
+    <div className="mb-8 lg:pr-28 lg:w-3/ lg:flex lg:flex-col">
+      <div className="lg:flex-1">
+        <h1 className="text-light-primary dark:text-dark-primary font-extrabold text-5xl lg:w-56">
           {"Hi, I'm Washington Junior"}
         </h1>
         <div className="social-container flex my-8">
           {data.socials.map(social => (
             <div
-              className="p-4 rounded-full cursor-pointer bg-theme-secundary bg-opacity-10 transition-colors"
+              className="p-4 rounded-full cursor-pointer bg-light-primary bg-opacity-10 dark:bg-dark-secundary transition-colors"
               key={social.name}>
               <social.icon
-                className="w-4 text-theme-primary fill-current"
+                className="w-4 text-light-primary dark:text-dark-primary fill-current"
                 title={social.name}
                 onClick={() => window.open(social.url, '_blank')}
               />
@@ -42,14 +42,14 @@ export default function LayoutLeftSide () {
         </div>
       </div>
       <div
-        className="lightbulb hidden cursor-pointer md:flex items-center max-w-max px-3 py-2.5 rounded-full bg-theme-primary dark:bg-theme-secundary dark:bg-opacity-10"
+        className="lightbulb hidden cursor-pointer lg:flex items-center max-w-max px-3 py-2.5 rounded-full bg-light-primary dark:bg-dark-secundary"
         onClick={setTheme}
       >
         {theme === 'dark'
-          ? <Lightbulb className="fill-current w-2.5 text-white dark:text-theme-primary"></Lightbulb>
-          : <LightbulbSolid className="fill-current w-2.5 text-white dark:text-theme-primary"></LightbulbSolid>
+          ? <Lightbulb className="fill-current w-2.5 text-white dark:text-dark-primary"></Lightbulb>
+          : <LightbulbSolid className="fill-current w-2.5 text-white"></LightbulbSolid>
         }
-        <p className="hidden text-xs ml-3 text-white dark:text-theme-primary">{theme === 'dark' ? 'Quer acender a luz?' : 'Quer apagar a luz?'}</p>
+        <p className="hidden text-xs ml-3 text-white">{theme === 'dark' ? 'Quer acender a luz?' : 'Quer apagar a luz?'}</p>
       </div>
     </div>
   )
