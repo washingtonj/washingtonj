@@ -2,6 +2,7 @@ import { useRef, useEffect, useContext } from 'react'
 import { useRouter } from 'next/router'
 import { Lightbulb, LightbulbSolid } from 'assets/icons'
 import { Theme } from 'context/theme'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const pages = [
@@ -22,17 +23,19 @@ export default function LayoutRightSide ({ children }) {
   }, [])
 
   return (
-    <div className="relative lg:w-3/6">
+    <div className="relative lg:w-6/12">
       <nav ref={navRef} className="flex items-center justify-between mb-4">
         <ul className="nav-menu flex">
           {pages.map(page => (
-            <li
+            <motion.li
               key={page.name}
+              initial={false}
+              animate={{ animation: 'flipInX', animationDuration: '1.5s' }}
               className={`text-xl uppercase font-extrabold text-light-primary dark:text-dark-primary
                 ${route.pathname !== page.path ? 'text-opacity-25 dark:text-opacity-25' : ''}`
               }>
               <Link href={page.path}>{page.name}</Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
         {theme === 'dark'
