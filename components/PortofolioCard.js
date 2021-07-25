@@ -16,7 +16,8 @@ export default function Card ({ title, lang, describe, homepage, hasPublicPage }
   }
 
   return (
-    <div
+    <li
+      tabIndex={0}
       className="flex flex-col w-full h-32 p-4 rounded cursor-pointer bg-light-secundary dark:bg-dark-secundary shadow-md overflow-hidden"
       onClick={() => open()}
     >
@@ -37,6 +38,6 @@ export default function Card ({ title, lang, describe, homepage, hasPublicPage }
       <div className="text-sm mt-2 overflow-auto text-gray-600 dark:text-gray-200">
         <p>{describe || 'Este projeto esta em desenvolvimento e ainda não tem uma descrição.'}</p>
       </div>
-    </div>
+    </li>
   )
 }

@@ -1,7 +1,7 @@
 import Layout from 'components/Layout'
 
 const Tag = ({ children }) => (
-  <cite className="py-0.5 px-1 mx-0.5 text-sm rounded not-italic bg-light-primary bg-opacity-10 dark:bg-dark-primary dark:bg-opacity-20 ">
+  <cite className="py-0.5 px-1 mx-0.5 text-sm rounded not-italic bg-light-primary bg-opacity-10 dark:bg-dark-primary dark:bg-opacity-10">
     {children}
   </cite>
 )

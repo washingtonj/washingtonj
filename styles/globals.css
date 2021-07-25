@@ -67,6 +67,27 @@ a {
   display: none;
 }
 
-.lightbulb:hover p {
-  display: flex;
+.stretch span {
+  max-width: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
 }
+
+.stretch:hover span {
+  transition-delay: 150ms;
+  max-width: 10rem;
+  opacity: 1;
+}
+
+.stretch svg {
+  transition: ease-in-out 1.2s;
+}
+
+.stretch:hover svg {
+  margin-right: 0.65rem;
+}
+

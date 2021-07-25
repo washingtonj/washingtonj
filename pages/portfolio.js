@@ -16,7 +16,7 @@ Portfolio.propTypes = {
 
 export default function Portfolio ({ data }) {
   return (
-    <div className="portfolio-container h-full lg:overflow-scroll lg:pb-20">
+    <ul className="portfolio-container h-full lg:overflow-scroll lg:pb-20">
       <Head>
         <title>{'Portfolio | Washington Junior'}</title>
         <meta name="description" content="Veja alguns dos meus projetos." />
@@ -32,7 +32,7 @@ export default function Portfolio ({ data }) {
           hasPublicPage={item.page}
         />
       ))}
-    </div>
+    </ul>
   )
 }
 

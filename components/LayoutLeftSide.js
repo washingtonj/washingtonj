@@ -26,7 +26,7 @@ export default function LayoutLeftSide () {
         </h1>
         <div className="social-container flex my-8">
           {data.socials.map(social => (
-            <div
+            <button
               className="p-4 rounded-full cursor-pointer bg-light-primary bg-opacity-10 dark:bg-dark-secundary transition-colors"
               key={social.name}>
               <social.icon
@@ -34,22 +34,25 @@ export default function LayoutLeftSide () {
                 title={social.name}
                 onClick={() => window.open(social.url, '_blank')}
               />
-            </div>
+            </button>
           ))}
         </div>
         <div className="subs-container text-base font-medium">
           {data.subs.map((sub, idx) => <p key={idx}>{sub}</p>)}
         </div>
       </div>
-      <div
-        className="lightbulb hidden cursor-pointer lg:flex items-center max-w-max px-3 py-2.5 rounded-full bg-light-primary dark:bg-dark-secundary"
-        onClick={setTheme}
-      >
-        {theme === 'dark'
-          ? <Lightbulb className="fill-current w-2.5 text-white dark:text-dark-primary"></Lightbulb>
-          : <LightbulbSolid className="fill-current w-2.5 text-white"></LightbulbSolid>
-        }
-        <p className="hidden text-xs ml-3 text-white">{theme === 'dark' ? 'Quer acender a luz?' : 'Quer apagar a luz?'}</p>
+      <div>
+        <button
+          className="stretch hidden lg:inline-flex items-center px-3 py-2.5 rounded-full bg-light-primary dark:bg-dark-secundary"
+          onClick={setTheme}>
+          {theme === 'dark'
+            ? <Lightbulb className="fill-current w-2.5 text-white dark:text-dark-primary"></Lightbulb>
+            : <LightbulbSolid className="fill-current w-2.5 text-white"></LightbulbSolid>
+          }
+          <span className="text-xs text-white">
+            {theme === 'dark' ? 'Ligar a luz' : 'Desligar a luz'}
+          </span>
+        </button>
       </div>
     </div>
   )
