@@ -4,10 +4,10 @@
 > **Software Engineer based on São Paulo**
 
 
- - I'm currently working at [UpLexis](https://uplexis.com.br).  🏢
+ - I'm currently working at [AB-InBev <> BEES](https://www.linkedin.com/company/beesbrasil).  🍺🐝
  - `.js` and `.ts` developer. ⌨️
  - I use `React` and `Vue` to 👨‍💻  and  `React Native` to 📲
- - `Elixir` Student. 📚
+ - `Elixir` and `Flutter` Student. 📚
  - create solutions is my goal. 🎯
 
 **In others plataforms:**
