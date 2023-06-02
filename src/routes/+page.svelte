@@ -2,7 +2,7 @@
 	import About from './about.svelte'
 </script>
 
-<section class="pt-48 mb-32 h-fit w-fit mx-auto flex flex-col items-center justify-center">
+<section class="pt-48 mb-32 w-fit mx-auto flex flex-col items-center justify-center">
 	<span class="uppercase">
 		<span class="flex justify-between">
 			<h2 class="text-6xl font-black">Hi, I'm</h2>
@@ -41,4 +41,6 @@
 	</div>
 </section>
 
-<About />
+<div class="container m-auto max-w-screen-2xl">
+	<About />
+</div>
