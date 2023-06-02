@@ -3,7 +3,7 @@
 	import Showcase from '$lib/components/showcase.svelte';
 </script>
 
-<section class="grid grid-cols-2 gap-14 py-14">
+<section class="grid md:grid-cols-2 gap-14 py-8 md:py-14">
 	<div class="h-fit grid gap-14">
 		<ContentLabel name="About me">
 			<p class="leading-none">

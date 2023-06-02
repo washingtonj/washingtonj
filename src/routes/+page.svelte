@@ -2,13 +2,13 @@
 	import About from './about.svelte'
 </script>
 
-<section class="pt-48 mb-32 w-fit mx-auto flex flex-col items-center justify-center">
+<section class="pt-28 md:pt-48 mb-12 md:mb-32 w-fit mx-auto flex flex-col items-center justify-center">
 	<span class="uppercase">
-		<span class="flex justify-between">
-			<h2 class="text-6xl font-black">Hi, I'm</h2>
-			<p class="text-2xl italic self-end font-medium">Software Engineer</p>
+		<span class="flex md:justify-between">
+			<h2 class="text-5xl mr-4 md:mr-0 md:text-6xl font-black">Hi, I'm</h2>
+			<p class="text-md md:text-2xl italic self-end font-medium">Software Engineer</p>
 		</span>
-		<h1 class="text-6xl font-black">WASHINGTON JUNIOR</h1>
+		<h1 class="text-5xl md:text-6xl font-black">WASHINGTON JUNIOR</h1>
 	</span>
 
 	<div class="w-full flex items-center mt-4">
