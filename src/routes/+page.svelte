@@ -2,6 +2,10 @@
 	import About from './about.svelte';
 </script>
 
+<title>
+	Washington Junior | Software Engineer
+</title>
+
 <section
 	class="pt-28 md:pt-48 mb-12 md:mb-32 w-fit mx-auto flex flex-col items-center justify-center"
 >
