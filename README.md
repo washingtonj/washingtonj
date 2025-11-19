@@ -1,14 +1,4 @@
 
 ## **Hi, I'm Washington Junior! 👋🏼**
 
-> **Software Engineer based on São Paulo/Brazil**
-
-
- - I'm currently working at [AB-InBev <> BEES](https://www.linkedin.com/company/beesbrasil).  🍺🐝
- - `.js` and `.ts` developer. ⌨️
- - I'm work with `React` and `Vue` to Web Dev and  `React Native` to Mobile Dev.
- - `Rust` Student. 📚
-
-
-**In others plataforms:**
-[`LinkedIn`](https://www.linkedin.com/in/washington-junior-7136a8101), [`CodeSandbox` ](https://codesandbox.io/u/washingtonj) and [`Expo Snacks` ](https://expo.io/@washingtonj)
+I'm a software engineer based in São Paulo who loves building things, mostly on the web, whether it's crafting intuitive UIs, developing tools that run in the browser or designing structured backend services to handle complex data processing. I believe that code is code anywhere and that the concepts behind good engineering travel well across languages.
